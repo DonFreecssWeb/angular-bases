@@ -14,8 +14,6 @@ export class MainPageComponent  {
         //return this.dbzService.heroes para no modificar el original crearemos una copia
         return [... this.dbzService.heroes]
       }
-
-      
       deleteHeroById(id:string):void{
         this.dbzService.deleteHeroById(id)
       }
