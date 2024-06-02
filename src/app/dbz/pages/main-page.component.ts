@@ -8,5 +8,18 @@ import { DbzService } from '../services/dbz.service';
 })
 
 export class MainPageComponent  {
-      constructor(public dbzService: DbzService){}
+      constructor(private dbzService: DbzService){}
+
+      get heroes(): Heroe[]{
+        //return this.dbzService.heroes para no modificar el original crearemos una copia
+        return [... this.dbzService.heroes]
+      }
+
+      deleteHeroById(id:string):void{
+        this.dbzService.deleteHeroById(id)
+      }
+
+      onNewHeroeOther( hero: Heroe){
+        this.dbzService.addHeroOther(hero)
+      }
 }

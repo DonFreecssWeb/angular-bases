@@ -12,7 +12,7 @@ export class DbzService {
         {id:uuid(), name: "Napa", power : 5000 }
     ]
 
-    onNewHeroeOther( hero: Heroe ) :void{
+    addHeroOther( hero: Heroe ) :void{
         const newHero:Heroe = {  id: uuid() , ... hero,}
         this.heroes.push(newHero)
         console.log(this.heroes)
