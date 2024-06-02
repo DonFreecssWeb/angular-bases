@@ -2,16 +2,22 @@
 <ul class="list-group">
     <li *ngFor="let heroe of heroes; let i = index; let isFirst = first;
     let isLast = last; let isOdd = odd; let isEven = even"
-    class="list-group-item"
+    class="list-group-item  d-flex justify-content-between align-items-center"
      [ngClass]='{"list-group-item-primary" : isLast}'>
-        <span class="text-primary"> {{ i }}</span>
-        Name: <strong>{{heroe.name}}
-        </strong>  - Power: {{heroe.power}} 
-        <span>Es first: {{isFirst}}</span>
-        <span>Es last: {{isFirst}}</span>
-        <span>Es even: {{isEven}}</span>
-        <span>Es odd: {{isEven}}</span>
+
+     <div >
+
+         <span class="text-primary"> {{ i }}</span>
+         Name: <strong>{{heroe.name}}
+         </strong>  - Power: {{heroe.power}} 
+         <!-- <span>Es first: {{isFirst}}</span>
+         <span>Es last: {{isFirst}}</span>
+         <span>Es even: {{isEven}}</span>
+         <span>Es odd: {{isEven}}</span> -->
+     </div>
+
+        <button (click)="onDeleteHeroByuiid(heroe.id)" class="btn btn-danger"> X</button>
     
     </li>
     
-</ul>4
+</ul>
