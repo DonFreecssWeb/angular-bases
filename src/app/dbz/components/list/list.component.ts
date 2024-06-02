@@ -22,7 +22,7 @@ export class ListComponent {
 
   onDeleteHeroByuiid(uuid?:string):void{
    if(!uuid) return;
-    this.onDelete.emit(uuid)
+   this.onDelete.emit(uuid)
   }
 
 
