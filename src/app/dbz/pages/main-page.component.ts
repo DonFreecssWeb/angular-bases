@@ -15,6 +15,7 @@ export class MainPageComponent  {
         return [... this.dbzService.heroes]
       }
 
+      
       deleteHeroById(id:string):void{
         this.dbzService.deleteHeroById(id)
       }
