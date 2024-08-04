@@ -5,7 +5,9 @@ import { CounterComponent } from "./components/counter/counterComponent";
     declarations: [
         CounterComponent
     ],
-    exports: [CounterComponent] //para que consuma el mundo externo de counter
+    exports: [
+        CounterComponent
+    ] //para que consuma el mundo externo de counter
 })
 export class CounterModule{
 

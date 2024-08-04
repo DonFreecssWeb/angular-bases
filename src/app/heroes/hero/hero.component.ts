@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 })
 export class HeroComponent {
   public name:string = "Ironman"
-  public age:number = 50
+  public age:number = 30  
+  list = ["Hulk","Thor","Superman","Batman","Spiderman"]
 
   get capitalizedName():string{
     return this.name.toUpperCase()
@@ -18,7 +19,8 @@ export class HeroComponent {
   }
 
   changeHero():void{
-    this.name = "Spiderman"
+    const index = Math.floor(Math.random() * this.list.length)
+    this.name = this.list[index]
 
   }
   changeAge():void{
