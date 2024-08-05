@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Heroe } from '../interfaces/heroe.interface';
+import { Character } from '../interfaces/heroe.interface';
 import { DbzService } from '../services/dbz.service';
 
 @Component({
@@ -10,15 +10,15 @@ import { DbzService } from '../services/dbz.service';
 export class MainPageComponent  {
       constructor(private dbzService: DbzService){}
 
-      get heroes(): Heroe[]{
+      get characters(): Character[]{
         //return this.dbzService.heroes para no modificar el original crearemos una copia
-        return [... this.dbzService.heroes]
+        return [... this.dbzService.characterList]
       }
       deleteHeroById(id:string):void{
         this.dbzService.deleteHeroById(id)
       }
 
-      onNewHeroeOther( hero: Heroe){
-        this.dbzService.addHeroOther(hero)
+      onNewCharacter( hero: Character){
+        this.dbzService.addNewcharacter(hero)
       }
 }

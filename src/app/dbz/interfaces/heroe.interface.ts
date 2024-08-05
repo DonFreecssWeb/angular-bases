@@ -1,4 +1,4 @@
-export interface Heroe{
+export interface Character{
     id?: string
     name:string
     power:number

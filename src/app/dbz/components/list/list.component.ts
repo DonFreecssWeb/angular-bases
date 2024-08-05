@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Heroe } from '../../interfaces/heroe.interface';
+import { Character } from '../../interfaces/heroe.interface';
 
 @Component({
   selector: 'dbz-list',
@@ -9,7 +9,7 @@ import { Heroe } from '../../interfaces/heroe.interface';
 export class ListComponent {
 
   @Input()
-  heroes: Heroe[] = [
+  characters: Character[] = [
     {name: "Krillin", power : 3000}
   ]
 
@@ -20,7 +20,7 @@ export class ListComponent {
   //   this.onDelete.emit(index)
   // }
 
-  onDeleteHeroByuiid(uuid?:string):void{
+  onDeleteCharacterByuiid(uuid?:string):void{
    if(!uuid) return;
    this.onDelete.emit(uuid)
   }
